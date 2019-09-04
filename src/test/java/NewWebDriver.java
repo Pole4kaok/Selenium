@@ -1,4 +1,6 @@
 import org.openqa.selenium.By;
+import org.openqa.selenium.ElementClickInterceptedException;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -11,9 +13,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
+import net.bytebuddy.pool.TypePool;
+
 public class NewWebDriver {
     public static void main(String[] args)throws InterruptedException {
-        System.setProperty("webdriver.chrome.driver", "D:\\ATM\\chromedriver.exe");
+       // System.setProperty("webdriver.chrome.driver", "D:\\ATM\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.get("https://qa-cms.cefile-app.com");
         WebElement username = driver.findElement(By.name("username"));
@@ -23,7 +27,7 @@ public class NewWebDriver {
         WebElement loginBtn = driver.findElement(By.xpath("//input[@value='Login']"));
         loginBtn.click();
 
-       // Thread.sleep(2000);
+        new WebDriverWait(driver, 10).until( ExpectedConditions.elementToBeClickable(By.id("menuItem-10000-0-main")));
         WebElement casemenu = driver.findElement(By.id("menuItem-10000-0-main"));
         WebElement hiddenmenu = driver.findElement(By.xpath("//*[@id=\"menuItem-10047-0-sub\"]"));
 
@@ -35,42 +39,72 @@ public class NewWebDriver {
         WebElement caseclass = driver.findElement(By.id("select2-chosen-1"));
         caseclass.click();
         WebElement typeAhead = driver.findElement(By.id("s2id_autogen1_search"));
+
+
         typeAhead.sendKeys("@@@");
-        Thread.sleep(1000);
-       /* new WebDriverWait(driver,10)
-                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"select2-results-1\"]")));*/
+
+        new WebDriverWait(driver,10)
+                .until(ExpectedConditions.invisibilityOfElementLocated(By.className("select2-searching")));
+
         WebElement dropdown = driver.findElement(By.xpath("//*[@id=\"select2-results-1\"]"));
         List<WebElement> options = dropdown.findElements(By.tagName("li"));
         for(WebElement option : options)
         {
             if(option.getText().equals("Business - N8 - Arbitration")){
+                new WebDriverWait(driver,10)
+                        .until(ExpectedConditions.elementToBeClickable(option));
                 option.click();
                 break;
             }
         }
 
+
         WebElement saveBtn = driver.findElement(By.name("save"));
-        saveBtn.click();
-       // Thread.sleep(2000);
-        new WebDriverWait(driver, 10)
+
+        new WebDriverWait(driver, 5).until(new ExpectedCondition<WebElement>() {
+            public WebElement apply(WebDriver driver) {
+                WebElement element = ExpectedConditions.visibilityOf(saveBtn).apply(driver);
+
+                try {
+                    if (element != null)
+                    {
+                        element.isEnabled();
+                    }
+                    element.click();
+                    return element;
+                } catch (ElementClickInterceptedException e) {
+                    return null;
+                }
+            }
+
+            public String toString() {
+                return "element to be clickable: ";
+            }
+        });
+
+
+
+        new WebDriverWait(driver, 20)
                 .until(ExpectedConditions.textToBePresentInElementLocated((By.xpath("//*[@id=\"caseRulesEnginePolling\"]/td/div/span[2]/span")),"Rules Engine Complete"));
         WebElement caseInfo = driver.findElement(By.xpath("//td/span[@class='ct-content']"));
         String caseNumber = caseInfo.getText();
-        //System.out.println(getCaseNumber);
+
         WebElement caseMenu = driver.findElement(By.id("menuItem-10000-0-main"));
         caseMenu.click();
 
-        Thread.sleep(2000);
+
+        new WebDriverWait(driver,10).until(ExpectedConditions.elementToBeClickable(By.id("menuItem-10053-0-sub")));
         WebElement caseSearch = driver.findElement(By.id("menuItem-10053-0-sub"));
         caseSearch.click();
 
         WebElement caseNumberField = driver.findElement(By.xpath("//*[@id=\"caseSection\"]/table/tbody/tr[1]/td[2]/input"));
+      // элемент не находится по этому класс нейм WebElement caseNumberField = driver.findElement(By.className("ct-input ct-inputText"));
         caseNumberField.sendKeys(caseNumber);
 
         WebElement searchBtn = driver.findElement(By.xpath("//input[@value='Search']"));
         searchBtn.click();
 
-        Thread.sleep(2000);
+        new WebDriverWait(driver,20).until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"caseSearchResultsTable\"]/table/tbody/tr/td[1]")));
         WebElement searchRslt = driver.findElement(By.xpath("//*[@id=\"caseSearchResultsTable\"]/table/tbody/tr/td[1]"));
         searchRslt.click();
 
