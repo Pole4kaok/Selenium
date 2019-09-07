@@ -1,6 +1,5 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.ElementClickInterceptedException;
-import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -8,17 +7,27 @@ import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import  org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
 
 import java.util.List;
 
-import net.bytebuddy.pool.TypePool;
+public class NewWebDriverTest {
 
-public class NewWebDriver {
-    public static void main(String[] args)throws InterruptedException {
-       // System.setProperty("webdriver.chrome.driver", "D:\\ATM\\chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
+    private WebDriver driver;
+    @BeforeMethod(alwaysRun = true)
+    public void browserSetup(){
+        System.setProperty("webdriver.chrome.driver", "D:\\ATM\\chromedriver.exe");
+        driver = new ChromeDriver();
+    }
+
+
+    @Test(description = "Creating and searching case")
+    public void createAndSearchCase() {
         driver.get("https://qa-cms.cefile-app.com");
         WebElement username = driver.findElement(By.name("username"));
         username.sendKeys("opsmanager");
@@ -40,9 +49,7 @@ public class NewWebDriver {
         caseclass.click();
         WebElement typeAhead = driver.findElement(By.id("s2id_autogen1_search"));
 
-
         typeAhead.sendKeys("@@@");
-
         new WebDriverWait(driver,10)
                 .until(ExpectedConditions.invisibilityOfElementLocated(By.className("select2-searching")));
 
@@ -59,7 +66,7 @@ public class NewWebDriver {
         }
 
 
-        WebElement saveBtn = driver.findElement(By.name("save"));
+        final WebElement saveBtn = driver.findElement(By.name("save"));
 
         new WebDriverWait(driver, 5).until(new ExpectedCondition<WebElement>() {
             public WebElement apply(WebDriver driver) {
@@ -81,8 +88,6 @@ public class NewWebDriver {
                 return "element to be clickable: ";
             }
         });
-
-
 
         new WebDriverWait(driver, 20)
                 .until(ExpectedConditions.textToBePresentInElementLocated((By.xpath("//*[@id=\"caseRulesEnginePolling\"]/td/div/span[2]/span")),"Rules Engine Complete"));
@@ -111,11 +116,12 @@ public class NewWebDriver {
         WebElement foundCaseNumber = driver.findElement(By.xpath("//td/span[@class='ct-content']"));
         String foundCase = foundCaseNumber.getText();
 
-        if(caseNumber.equals(foundCase))
-            System.out.println("Success");
-        else
-            System.exit(-1);
+        Assert.assertEquals(caseNumber,foundCase,"Search not done");
 
+    }
+    @AfterMethod(alwaysRun = true)
+    public void browserClose(){
         driver.quit();
+        driver = null;
     }
 }
