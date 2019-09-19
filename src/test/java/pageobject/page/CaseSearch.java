@@ -3,9 +3,10 @@ package pageobject.page;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.WebDriver;
 
 public class CaseSearch {
-     new WebDriverWait(driver,10).until(ExpectedConditions.elementToBeClickable(By.id("menuItem-10053-0-sub")));
+    /* new WebDriverWait(driver,10).until(ExpectedConditions.elementToBeClickable(By.id("menuItem-10053-0-sub")));
     WebElement caseSearch = driver.findElement(By.id("menuItem-10053-0-sub"));
         caseSearch.click();
 
@@ -18,5 +19,5 @@ public class CaseSearch {
 
         new WebDriverWait(driver,20).until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"caseSearchResultsTable\"]/table/tbody/tr/td[1]")));
     WebElement searchRslt = driver.findElement(By.xpath("//*[@id=\"caseSearchResultsTable\"]/table/tbody/tr/td[1]"));
-        searchRslt.click();
+        searchRslt.click();*/
 }

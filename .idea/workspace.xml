@@ -2,16 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9115984e-f870-408a-abd5-4a3fa4f649fc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/pageobject/page/CaseSearch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pageobject/page/CaseView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pageobject/page/LoginPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pageobject/page/MainPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pageobject/page/AbstractPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/NewWebDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/NewWebDriverTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/NewWebDriver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/NewWebDriverTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageobject/test/NewWebDriverTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pageobject/page/CaseSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageobject/page/CaseSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pageobject/page/CaseView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageobject/page/CaseView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pageobject/page/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageobject/page/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pageobject/page/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageobject/page/MainPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/NewWebDriverTest$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/NewWebDriverTest.class" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,10 +43,12 @@
       </MavenImportingSettings>
     </option>
   </component>
+  <component name="ProjectId" id="1R4FIDpwMooZKDCqzH7I3fHwz8b" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1567612393963" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/pageobject/test" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ATM/demo 7/demo_6" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.18529412" />
@@ -86,7 +88,7 @@
       <option name="ALTERNATIVE_JRE_PATH" value="12" />
       <option name="SUITE_NAME" value="" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="NewWebDriverTest" />
+      <option name="MAIN_CLASS_NAME" value="pageobject.test.NewWebDriverTest" />
       <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="CLASS" />
       <option name="PARAMETERS" value="" />
@@ -127,12 +129,20 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="19c0b7ba-7948-4e6b-89d9-16c8e1a4f335" name="Default Changelist" comment="" />
+      <changelist id="9115984e-f870-408a-abd5-4a3fa4f649fc" name="Default Changelist" comment="" />
       <created>1567411383922</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1567411383922</updated>
     </task>
+    <task id="LOCAL-00001" summary="page object begin">
+      <created>1567897092978</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1567897092978</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -140,11 +150,17 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="page object begin" />
+    <option name="LAST_COMMIT_MESSAGE" value="page object begin" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateCodeFragment">
