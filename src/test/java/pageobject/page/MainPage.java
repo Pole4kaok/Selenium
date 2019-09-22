@@ -12,13 +12,22 @@ import org.openqa.selenium.WebDriver;
 import java.util.List;
 
 public class MainPage extends AbstractPage {
-    private static final By CASEMENU_LOCATOR = By.id("menuItem-10000-0-main");
-    private static final By CREATECASE_LOCATOR = By.xpath("//*[@id=\"menuItem-10047-0-sub\"]");
+    protected static final By CASEMENU_LOCATOR = By.id("menuItem-10000-0-main");
+    protected static final By CREATECASE_LOCATOR = By.xpath("//*[@id=\"menuItem-10047-0-sub\"]");
+    protected static final By CASE_SEARCH_LOCATOR = By.id("menuItem-10053-0-sub");
     private static final By FIELD_LOCATOR = By.id("select2-chosen-1");
     private static final By TYPEAHEAD_LOCATOR = By.id("s2id_autogen1_search");
-    private static final By INVISIBLE_LOCATOR = By.className("select2-searching");
-    private static final By CLASSDROPDOWN_LOCATOR = By.xpath("//*[@id=\\\"select2-results-1\\\"]");
+    protected static final By INVISIBLE_LOCATOR = By.className("select2-searching");
+    protected static final By CLASSDROPDOWN_LOCATOR = By.xpath("//*[@id=\"select2-results-1\"]");
+    protected static final By SAVEBTN_LOCATOR = By.name("save");
     public MainPage (WebDriver driver){super(driver);}
+    //*[@name="caseSearchParameters.judgeActorInstanceID"]/preceding-sibling::div
+  /*  protected WebElement caseMenu = driver.findElement(CASEMENU_LOCATOR);
+    protected WebElement createCaseMenu = driver.findElement(CREATECASE_LOCATOR);
+    protected WebElement classificationField = driver.findElement(FIELD_LOCATOR);
+    protected WebElement classificationTypeAhead = driver.findElement(TYPEAHEAD_LOCATOR);
+    protected WebElement classificationDropdown = driver.findElement(CLASSDROPDOWN_LOCATOR);
+    protected WebElement saveBtn = driver.findElement(By.name("save"));*/
 
     public MainPage openCreateCase(){
         waitElementClickable(CASEMENU_LOCATOR);
@@ -34,74 +43,22 @@ public class MainPage extends AbstractPage {
         return this;
     }
 
-    public MainPage chooseCaseClassification(String caseClass){
-        WebElement drodown = driver.findElement(CLASSDROPDOWN_LOCATOR);
-        List<WebElement> options = drodown.findElements(By.tagName("li"));
+    public MainPage chooseCaseClassification(String classification){
+        WebElement classificationDropdown = driver.findElement(CLASSDROPDOWN_LOCATOR);
+        List<WebElement> options = classificationDropdown.findElements(By.tagName("li"));
         for (WebElement option: options){
-            if(option.getText().equals(caseClass)){
+            if(option.getText().equals(classification)){
                 new WebDriverWait(driver,10)
                     .until(ExpectedConditions.elementToBeClickable(option));
                 option.click();
                 break;
             }
         }
+
+        WebElement saveBtn = driver.findElement(SAVEBTN_LOCATOR);
+        customWait(saveBtn);
         return this;
     }
 }
 
-     /*new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(By.id("menuItem-10000-0-main")));
-    WebElement casemenu = driver.findElement(By.id("menuItem-10000-0-main"));
-    WebElement hiddenmenu = driver.findElement(By.xpath("//*[@id=\"menuItem-10047-0-sub\"]"));
-
-    Actions builder = new Actions(driver);
-        builder.moveToElement(casemenu).click(hiddenmenu);
-    Action mouseOverandClick = builder.build();
-        mouseOverandClick.perform();*/
-     /*
-
-    WebElement caseclass = driver.findElement(By.id("select2-chosen-1"));
-        caseclass.click();
-    WebElement typeAhead = driver.findElement(By.id("s2id_autogen1_search"));
-
-        typeAhead.sendKeys("@@@");
-        new WebDriverWait(driver,10)
-                .until(ExpectedConditions.invisibilityOfElementLocated(By.className("select2-searching")));*/
-     /*
-
-    WebElement dropdown = driver.findElement(By.xpath("//*[@id=\"select2-results-1\"]"));
-    List<WebElement> options = dropdown.findElements(By.tagName("li"));
-        for(WebElement option : options)
-    {
-        if(option.getText().equals("Business - N8 - Arbitration")){
-            new WebDriverWait(driver,10)
-                    .until(ExpectedConditions.elementToBeClickable(option));
-            option.click();
-            break;
-        }
-    }
-
-
-    final WebElement saveBtn = driver.findElement(By.name("save"));
-
-         //ГДЕ ЛУЧШЕ РАЗМЕСТИТЬ КАСТОМНЫЙ ВЕЙТЕР
-        new WebDriverWait(driver, 5).until(new ExpectedCondition<WebElement>() {
-        public WebElement apply(WebDriver driver) {
-            WebElement element = ExpectedConditions.visibilityOf(saveBtn).apply(driver);
-
-            try {
-                if (element != null)
-                {
-                    element.isEnabled();
-                }
-                element.click();
-                return element;
-            } catch (ElementClickInterceptedException e) {
-                return null;
-            }
-        }
-
-        public String toString() {
-            return "element to be clickable: ";
-        }
-    });*/
 

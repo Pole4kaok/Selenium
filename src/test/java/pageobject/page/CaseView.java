@@ -5,12 +5,25 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.WebDriver;
 
-public class CaseView {
-   /* new WebDriverWait(driver, 20)
-                .until(ExpectedConditions.textToBePresentInElementLocated((By.xpath("//*[@id=\"caseRulesEnginePolling\"]/td/div/span[2]/span")),"Rules Engine Complete"));
-    WebElement caseInfo = driver.findElement(By.xpath("//td/span[@class='ct-content']"));
-    String caseNumber = caseInfo.getText();
+public class CaseView extends AbstractPage{
+    private static final By RULES_ENGINE_LOCATOR = By.xpath("//*[@id=\"caseRulesEnginePolling\"]/td/div/span[2]/span");
+    private static final By CASE_INFO_LOCATOR = By.xpath("//td/span[@class='ct-content']");
 
-    WebElement caseMenu = driver.findElement(By.id("menuItem-10000-0-main"));
-        caseMenu.click();*/
+    private String rulesEngineComplete = "Rules Engine Complete";
+    public CaseView (WebDriver driver){super(driver);}
+
+    public String getCaseNumber(){
+        waitRulesEngineComplete(RULES_ENGINE_LOCATOR,rulesEngineComplete);
+        WebElement caseInfo = driver.findElement(CASE_INFO_LOCATOR);
+        String caseNumber = caseInfo.getText();
+        return caseNumber;
+    }
+
+    public String getFoundCaseNumber(){
+        WebElement caseInfo = driver.findElement(CASE_INFO_LOCATOR);
+        String caseNumber = caseInfo.getText();
+        return caseNumber;
+    }
+
+
 }
