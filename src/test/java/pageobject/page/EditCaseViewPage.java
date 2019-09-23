@@ -17,7 +17,6 @@ public class EditCaseViewPage extends AbstractPage {
     public EditCaseViewPage addCaseCaptionAndTitle(String caseCaption, String caseTitle){
         waitElementVisible(CASEVIEW_LOCATOR);
         driver.findElement(CASEVIEW_LOCATOR).click();
-        //driver.findElement(CASECAPTIONMENU_LOCATOR).click();
         waitElementVisible(EDITLINK_LOCATOR);
         driver.findElement(EDITLINK_LOCATOR).click();
         waitElementClickable(CASECAPTION_FIELD_LOCATOR);

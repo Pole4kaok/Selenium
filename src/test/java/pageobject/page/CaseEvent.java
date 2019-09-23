@@ -36,8 +36,6 @@ public class CaseEvent extends AbstractPage {
                 option.click();
                 break;
             }
-            else
-                System.out.println("kiss my shiny ass"+option.getText());
         }
 
         WebElement saveBtn = driver.findElement(SAVEBTN_LOCATOR);

@@ -24,7 +24,7 @@ public class NewWebDriverTest {
     private WebDriver driver;
     @BeforeMethod(alwaysRun = true)
     public void browserSetup(){
-        System.setProperty("webdriver.chrome.driver", "D:\\ATM\\chromedriver.exe");
+        //System.setProperty("webdriver.chrome.driver", "D:\\ATM\\chromedriver.exe");
         driver = new ChromeDriver();
     }
 
@@ -34,17 +34,16 @@ public class NewWebDriverTest {
         LoginPage loginPage = new LoginPage(driver).open().login("opsmanager","clerkfull");
         MainPage mainPage = new MainPage(driver).openCreateCase().fillInCaseClassification("@@@").chooseCaseClassification("Business - N8 - Arbitration");
     }
+
+    @Test (description = "create and search for a case")
     public void createAndSearchCase() {
-       /* driver.get("https://qa-cms.cefile-app.com");
-        LoginPage loginPage = new LoginPage(driver).open().login("opsmanager","clerkfull");
-        MainPage mainPage = new MainPage(driver).openCreateCase().fillInCaseClassification("@@@").chooseCaseClassification("Business - N8 - Arbitration");*/
         createCase();
         String createdCaseNumber = new CaseView(driver).getCaseNumber();
         CaseSearch caseSearch = new CaseSearch(driver).caseSearch(createdCaseNumber);
         String foundCaseNumber = new CaseView(driver).getFoundCaseNumber();
-
         Assert.assertEquals(createdCaseNumber,foundCaseNumber,"Failed");
     }
+
    @Test(description = "complete checklist")
    public void completeChecklist(){
         createCase();
@@ -52,13 +51,8 @@ public class NewWebDriverTest {
                .addPerson("Last","First","Liiiine","Wales").addLegalRep();
        CaseEvent caseEvent = new CaseEvent(driver).chooseCaseEventClass("Filing - Bundle").saveCaseEvent();
        EditCaseViewPage editCaseViewPage = new EditCaseViewPage(driver).addCaseCaptionAndTitle("Caption","Title");
-       WebElement checklist = driver.findElement(By.xpath("//*[@id=\"leftNav\"]/div[2]/div/div"));
-       Boolean isHere = checklist.isSelected();
-
-       // HELP1!1!1!!!1!
-        //Assert.assertTrue((checklist.getAttribute("style").equals("display: none")),"It is visible. Or not. Maybe wrong selector");
-       System.out.println(isHere);
-
+       List checklist = driver.findElements(By.cssSelector(".cc-checklistTable"));
+       Assert.assertTrue(checklist.size()==0,"It is visible. Or not. Maybe wrong selector");
    }
 
 

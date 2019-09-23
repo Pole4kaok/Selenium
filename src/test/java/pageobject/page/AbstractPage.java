@@ -29,9 +29,10 @@ public class AbstractPage {
     }
 
 
-    public void customWait(WebElement element1){
+    public void customWait(final WebElement element1){
         new WebDriverWait(driver, 10).until(new ExpectedCondition<WebElement>() {
             public WebElement apply(WebDriver driver) {
+
                 WebElement element = ExpectedConditions.visibilityOf(element1).apply(driver);
                 try {
                     if (element != null)

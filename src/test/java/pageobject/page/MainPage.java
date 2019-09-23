@@ -21,13 +21,6 @@ public class MainPage extends AbstractPage {
     protected static final By CLASSDROPDOWN_LOCATOR = By.xpath("//*[@id=\"select2-results-1\"]");
     protected static final By SAVEBTN_LOCATOR = By.name("save");
     public MainPage (WebDriver driver){super(driver);}
-    //*[@name="caseSearchParameters.judgeActorInstanceID"]/preceding-sibling::div
-  /*  protected WebElement caseMenu = driver.findElement(CASEMENU_LOCATOR);
-    protected WebElement createCaseMenu = driver.findElement(CREATECASE_LOCATOR);
-    protected WebElement classificationField = driver.findElement(FIELD_LOCATOR);
-    protected WebElement classificationTypeAhead = driver.findElement(TYPEAHEAD_LOCATOR);
-    protected WebElement classificationDropdown = driver.findElement(CLASSDROPDOWN_LOCATOR);
-    protected WebElement saveBtn = driver.findElement(By.name("save"));*/
 
     public MainPage openCreateCase(){
         waitElementClickable(CASEMENU_LOCATOR);
