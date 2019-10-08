@@ -24,7 +24,7 @@ public class NewWebDriverTest {
     private WebDriver driver;
     @BeforeMethod(alwaysRun = true)
     public void browserSetup(){
-        //System.setProperty("webdriver.chrome.driver", "D:\\ATM\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "D:\\ATM\\chromedriver.exe");
         driver = new ChromeDriver();
     }
 
@@ -53,6 +53,26 @@ public class NewWebDriverTest {
        EditCaseViewPage editCaseViewPage = new EditCaseViewPage(driver).addCaseCaptionAndTitle("Caption","Title");
        List checklist = driver.findElements(By.cssSelector(".cc-checklistTable"));
        Assert.assertTrue(checklist.size()==0,"It is visible. Or not. Maybe wrong selector");
+   }
+
+   @Test(description = "create resource schedule")
+   public void createResourceScheduleSession(){
+       driver.get("https://qa-cms.cefile-app.com");
+       LoginPage loginPage = new LoginPage(driver).open().login("sccomanager","clerkfull");
+       MainPage mainPage = new MainPage(driver).openCalendar();
+       String sessionName = "Mein Session 2";
+       CalendarPage calendarPage = new CalendarPage(driver).createNewResSchedule(sessionName, "test");
+       String createdSessionName = calendarPage.checkCreatedSession();
+       Assert.assertEquals(sessionName,createdSessionName);
+
+   }
+
+   @Test(description = "drag and drop try")
+   public void dragAndDropResource(){
+       driver.get("https://qa-cms.cefile-app.com");
+       LoginPage loginPage = new LoginPage(driver).open().login("sccomanager","clerkfull");
+       MainPage resourceView = new MainPage(driver).openResourceView();
+       ResourceViewPage resourceViewPage = new ResourceViewPage(driver).dragAndDrop();
    }
 
 

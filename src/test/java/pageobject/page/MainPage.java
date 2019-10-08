@@ -1,19 +1,19 @@
 package pageobject.page;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.ElementClickInterceptedException;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.openqa.selenium.WebDriver;
 
 import java.util.List;
 
 public class MainPage extends AbstractPage {
     protected static final By CASEMENU_LOCATOR = By.id("menuItem-10000-0-main");
+    protected static final By CALENDARMENU_LOCATOR = By.id("menuItem-10002-0-main");
+    protected static final By RESOURCEVIEW_LOCATOR = By.xpath("//*[@id=\"menuItem-110009-0-sub\"]");
     protected static final By CREATECASE_LOCATOR = By.xpath("//*[@id=\"menuItem-10047-0-sub\"]");
+    protected static final By CALENDAR_LOCATOR = By.id("menuItem-110004-0-sub");
     protected static final By CASE_SEARCH_LOCATOR = By.id("menuItem-10053-0-sub");
     private static final By FIELD_LOCATOR = By.id("select2-chosen-1");
     private static final By TYPEAHEAD_LOCATOR = By.id("s2id_autogen1_search");
@@ -26,6 +26,21 @@ public class MainPage extends AbstractPage {
         waitElementClickable(CASEMENU_LOCATOR);
         driver.findElement(CASEMENU_LOCATOR).click();
         driver.findElement(CREATECASE_LOCATOR).click();
+        return this;
+    }
+
+    public MainPage openCalendar(){
+        waitElementClickable(CALENDARMENU_LOCATOR);
+        driver.findElement(CALENDARMENU_LOCATOR).click();
+        driver.findElement(CALENDAR_LOCATOR).click();
+        return this;
+    }
+
+    public MainPage openResourceView(){
+        waitElementClickable(CALENDARMENU_LOCATOR);
+        driver.findElement(CALENDARMENU_LOCATOR).click();
+        waitElementClickable(RESOURCEVIEW_LOCATOR);
+        driver.findElement(RESOURCEVIEW_LOCATOR).click();
         return this;
     }
 
