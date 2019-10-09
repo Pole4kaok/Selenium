@@ -5,12 +5,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.WebDriver;
 
-public class CaseView extends AbstractPage{
+public class CaseViewPage extends AbstractPage{
     private static final By RULES_ENGINE_LOCATOR = By.xpath("//*[@id=\"caseRulesEnginePolling\"]/td/div/span[2]/span");
     private static final By CASE_INFO_LOCATOR = By.xpath("//td/span[@class='ct-content']");
 
     private String rulesEngineComplete = "Rules Engine Complete";
-    public CaseView (WebDriver driver){super(driver);}
+    public CaseViewPage(WebDriver driver){super(driver);}
 
     public String getCaseNumber(){
         waitRulesEngineComplete(RULES_ENGINE_LOCATOR,rulesEngineComplete);

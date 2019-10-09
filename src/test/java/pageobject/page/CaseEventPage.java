@@ -10,15 +10,15 @@ import java.util.List;
 
 import static pageobject.page.MainPage.*;
 
-public class CaseEvent extends AbstractPage {
+public class CaseEventPage extends AbstractPage {
     private static final By CASEEVENTFIELD_LOCATOR = By.id("select2-chosen-1");
     private static final By CASEEVENTTYPEAHEAD_LOCATOR = By.id("s2id_autogen1_search");
     private static final By CASEEVENTCLASS_LOCATOR = By.id("docketEntryName");
     protected static final By CASEEVENT_LOCATOR = By.id("menuItem-10046-1-main");
     protected static final By CASEEVENTFOUND_LOCATOR = By.id("select2-result-label-771");
-    public CaseEvent(WebDriver driver){super(driver);}
+    public CaseEventPage(WebDriver driver){super(driver);}
 
-    public CaseEvent chooseCaseEventClass(String caseEvent){
+    public CaseEventPage chooseCaseEventClass(String caseEvent){
        // waitElementVisible(CASEEVENT_LOCATOR);
         driver.findElement(CASEEVENT_LOCATOR).click();
         waitElementClickable(CASEEVENTFIELD_LOCATOR);
@@ -42,7 +42,7 @@ public class CaseEvent extends AbstractPage {
         customWait(saveBtn);
         return this;
     }
-     public CaseEvent saveCaseEvent(){
+     public CaseEventPage saveCaseEvent(){
         waitElementVisible(CASEEVENTCLASS_LOCATOR);
         driver.findElement(SAVEBTN_LOCATOR).click();
         return this;

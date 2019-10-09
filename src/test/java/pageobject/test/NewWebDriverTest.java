@@ -1,19 +1,11 @@
 package pageobject.test;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Action;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import pageobject.page.*;
 
@@ -24,7 +16,7 @@ public class NewWebDriverTest {
     private WebDriver driver;
     @BeforeMethod(alwaysRun = true)
     public void browserSetup(){
-       // System.setProperty("webdriver.chrome.driver", "D:\\ATM\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "D:\\ATM\\chromedriver.exe");
         driver = new ChromeDriver();
     }
 
@@ -38,9 +30,9 @@ public class NewWebDriverTest {
     @Test (description = "create and search for a case")
     public void createAndSearchCase() {
         createCase();
-        String createdCaseNumber = new CaseView(driver).getCaseNumber();
-        CaseSearch caseSearch = new CaseSearch(driver).caseSearch(createdCaseNumber);
-        String foundCaseNumber = new CaseView(driver).getFoundCaseNumber();
+        String createdCaseNumber = new CaseViewPage(driver).getCaseNumber();
+        CaseSearchPage caseSearch = new CaseSearchPage(driver).caseSearch(createdCaseNumber);
+        String foundCaseNumber = new CaseViewPage(driver).getFoundCaseNumber();
         Assert.assertEquals(createdCaseNumber,foundCaseNumber,"Failed");
     }
 
@@ -49,7 +41,7 @@ public class NewWebDriverTest {
         createCase();
        AddPartyPage addPartyPage = new AddPartyPage(driver).addPartyRoleType("Party","Defendant")
                .addPerson("Last","First","Liiiine","Wales").addLegalRep();
-       CaseEvent caseEvent = new CaseEvent(driver).chooseCaseEventClass("Filing - Bundle").saveCaseEvent();
+       CaseEventPage caseEvent = new CaseEventPage(driver).chooseCaseEventClass("Filing - Bundle").saveCaseEvent();
        EditCaseViewPage editCaseViewPage = new EditCaseViewPage(driver).addCaseCaptionAndTitle("Caption","Title");
        List checklist = driver.findElements(By.cssSelector(".cc-checklistTable"));
        Assert.assertTrue(checklist.size()==0,"It is visible. Or not. Maybe wrong selector");
@@ -74,6 +66,10 @@ public class NewWebDriverTest {
        loginPage.open().login("sccomanager","clerkfull");
        MainPage resourceView = new MainPage(driver).openResourceView();
        ResourceViewPage resourceViewPage = new ResourceViewPage(driver).dragAndDrop();
+       String newDate = resourceViewPage.getNewDateValue();
+       String getNewDate = resourceViewPage.verifyNewDate();
+       Assert.assertEquals(newDate,getNewDate);
+
    }
 
 

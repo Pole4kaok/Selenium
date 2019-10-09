@@ -1,9 +1,6 @@
 package pageobject.page;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.ElementClickInterceptedException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -26,6 +23,15 @@ public class AbstractPage {
     }
     public void waitElementVisible(By locator){
         new WebDriverWait(driver,10).until(ExpectedConditions.visibilityOfElementLocated(locator));
+    }
+
+    public void waitAjaxFinished(){
+        new WebDriverWait(driver, 2000).until(new ExpectedCondition<Boolean>() {
+            public Boolean apply(WebDriver driver) {
+                JavascriptExecutor js = (JavascriptExecutor) driver;
+                return (Boolean) js.executeScript("return jQuery.active == 0");
+            }
+        });
     }
 
 
