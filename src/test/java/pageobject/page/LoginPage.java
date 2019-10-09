@@ -13,12 +13,12 @@ public class LoginPage extends AbstractPage {
     private static final By PASSWORD_LOCATOR = By.name("password");
     private static final By LOGINBTN_LOCATOR = By.xpath("//input[@value='Login']");
 
-        public LoginPage login(String username, String password){
+        public MainPage login(String username, String password){
             new WebDriverWait(driver,10).until(ExpectedConditions.visibilityOfElementLocated(USERNAME_LOCATOR));
             driver.findElement(USERNAME_LOCATOR).sendKeys(username);
             driver.findElement(PASSWORD_LOCATOR).sendKeys(password);
             driver.findElement(LOGINBTN_LOCATOR).click();
-            return this;
+            return new MainPage(driver);
         }
 
         public LoginPage open(){

@@ -24,14 +24,14 @@ public class NewWebDriverTest {
     private WebDriver driver;
     @BeforeMethod(alwaysRun = true)
     public void browserSetup(){
-        System.setProperty("webdriver.chrome.driver", "D:\\ATM\\chromedriver.exe");
+       // System.setProperty("webdriver.chrome.driver", "D:\\ATM\\chromedriver.exe");
         driver = new ChromeDriver();
     }
 
     @Test(description = "Creating and searching case")
     public void createCase(){
         driver.get("https://qa-cms.cefile-app.com");
-        LoginPage loginPage = new LoginPage(driver).open().login("opsmanager","clerkfull");
+       // LoginPage loginPage = new LoginPage(driver).open().login("opsmanager","clerkfull");
         MainPage mainPage = new MainPage(driver).openCreateCase().fillInCaseClassification("@@@").chooseCaseClassification("Business - N8 - Arbitration");
     }
 
@@ -58,11 +58,11 @@ public class NewWebDriverTest {
    @Test(description = "create resource schedule")
    public void createResourceScheduleSession(){
        driver.get("https://qa-cms.cefile-app.com");
-       LoginPage loginPage = new LoginPage(driver).open().login("sccomanager","clerkfull");
-       MainPage mainPage = new MainPage(driver).openCalendar();
+       MainPage mainPage = new LoginPage(driver).open().login("sccomanager","clerkfull");
+       mainPage.openCalendar();
        String sessionName = "Mein Session 2";
-       CalendarPage calendarPage = new CalendarPage(driver).createNewResSchedule(sessionName, "test");
-       String createdSessionName = calendarPage.checkCreatedSession();
+//       CalendarPage calendarPage = new CalendarPage(driver).createNewResSchedule(sessionName, "Charles");
+       String createdSessionName = new CalendarPage(driver).checkCreatedSession();
        Assert.assertEquals(sessionName,createdSessionName);
 
    }
@@ -70,7 +70,8 @@ public class NewWebDriverTest {
    @Test(description = "drag and drop try")
    public void dragAndDropResource(){
        driver.get("https://qa-cms.cefile-app.com");
-       LoginPage loginPage = new LoginPage(driver).open().login("sccomanager","clerkfull");
+       LoginPage loginPage = new LoginPage(driver);
+       loginPage.open().login("sccomanager","clerkfull");
        MainPage resourceView = new MainPage(driver).openResourceView();
        ResourceViewPage resourceViewPage = new ResourceViewPage(driver).dragAndDrop();
    }

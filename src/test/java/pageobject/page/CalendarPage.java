@@ -22,7 +22,7 @@ public class CalendarPage extends AbstractPage {
     protected static final By RESOURCE_LOCATOR = By. xpath("//*[@id=\"resultsAll\"]/table/tbody/tr[1]/td[1]");
     protected static final By AVAILABILITY_LOCATOR = By.name("event.availabilityType.ID");
     protected static final By SAVEBTN_LOCATOR = By.id("saveButton");
-    protected static final By CREATEDEVENT_LOCATOR = By.xpath("//*[@id=\"calendar\"]/div/div/div/div[1]/div[4]/div");
+    protected static final By CREATEDEVENT_LOCATOR = By.xpath("//div[contains(@class,\"calendar-event\")][.=\"Mein Session 2\"]");
     protected static final By CREATEDSESSIONNAME_LOCATOR = By.xpath("//*[@id=\"eventPreviewPopup\"]/div/table/tbody/tr[2]/td[2]");
     protected static final By SUCCESSMESSAGE_LOCATOR = By.xpath("//*[@id=\"mainLayoutTable\"]/tbody/tr/td[2]/div[3]");
 
@@ -63,11 +63,12 @@ public class CalendarPage extends AbstractPage {
     }
 
     public String checkCreatedSession(){
-        waitElementVisible(SUCCESSMESSAGE_LOCATOR);
+//        waitElementVisible(SUCCESSMESSAGE_LOCATOR);
+        waitElementClickable(CREATEDEVENT_LOCATOR);
         WebElement createdEvent = driver.findElement(CREATEDEVENT_LOCATOR);
         new Actions(driver).contextClick(createdEvent).build().perform();
         waitElementVisible(CREATEDSESSIONNAME_LOCATOR);
-        String createSessionName = driver.findElement(CREATEDSESSIONNAME_LOCATOR).getText().toString();
+        String createSessionName = driver.findElement(CREATEDSESSIONNAME_LOCATOR).getText();
         return createSessionName;
     }
 }
