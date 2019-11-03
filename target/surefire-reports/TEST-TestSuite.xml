@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="5" failures="5" name="TestSuite" time="6.047" errors="0" skipped="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="java.vm.version" value="12.0.2+10"/>
+    <property name="sun.boot.library.path" value="D:\jdk-12.0.2_windows-x64_bin\jdk-12.0.2\bin"/>
+    <property name="browser" value="chrome"/>
+    <property name="maven.multiModuleProjectDirectory" value="D:\MyProjects"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="path.separator" value=";"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="RU"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="D:\MyProjects"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="java.runtime.version" value="12.0.2+10"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\User\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="classworlds.conf" value="D:\ATM\apache-maven-3.6.2\bin\..\bin\m2.conf"/>
+    <property name="sun.jnu.encoding" value="Cp1251"/>
+    <property name="java.library.path" value="D:\jdk-12.0.2_windows-x64_bin\jdk-12.0.2\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Calibre2\;D:\Git\cmd;D:\ATM;D:\jdk-12.0.2_windows-x64_bin\jdk-12.0.2\bin;D:\ATM\apache-maven-3.6.2\bin;D:\ATM\apache-maven-3.6.2\bin;D:\jdk-12.0.2_windows-x64_bin\jdk-12.0.2\bin;C:\Users\User\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2019.2.1\bin;;D:\ATM;D:\ATM\apache-maven-3.6.2\bin;;."/>
+    <property name="maven.conf" value="D:\ATM\apache-maven-3.6.2\bin\../conf"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="java.class.version" value="56.0"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.0"/>
+    <property name="library.jansi.path" value="D:\ATM\apache-maven-3.6.2\bin\..\lib\jansi-native"/>
+    <property name="surefire.suiteXmlFiles" value="src\test\resources\testng-smoke.xml"/>
+    <property name="user.home" value="C:\Users\User"/>
+    <property name="user.timezone" value="Europe/Minsk"/>
+    <property name="file.encoding" value="Cp1251"/>
+    <property name="java.specification.version" value="12"/>
+    <property name="user.name" value="User"/>
+    <property name="java.class.path" value="D:\ATM\apache-maven-3.6.2\bin\..\boot\plexus-classworlds-2.6.0.jar"/>
+    <property name="java.vm.specification.version" value="12"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dbrowser=chrome -Dsurefire.suiteXmlFiles=src\test\resources\testng-smoke.xml clean test"/>
+    <property name="java.home" value="D:\jdk-12.0.2_windows-x64_bin\jdk-12.0.2"/>
+    <property name="user.language" value="ru"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.version" value="12.0.2"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="sun.stderr.encoding" value="cp866"/>
+    <property name="maven.home" value="D:\ATM\apache-maven-3.6.2\bin\.."/>
+    <property name="file.separator" value="\"/>
+    <property name="java.version.date" value="2019-07-16"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.stdout.encoding" value="cp866"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase classname="pageobject.test.CalendarTest" name="createResourceScheduleSession" time="2.571">
+    <failure type="java.lang.ExceptionInInitializerError">java.lang.ExceptionInInitializerError
+	at service.UserCreator.withCredentialsFromProperty(UserCreator.java:10)
+	at pageobject.test.CalendarTest.createResourceScheduleSession(CalendarTest.java:16)
+Caused by: java.lang.NullPointerException
+	at java.base/java.util.ResourceBundle$CacheKey.hashCode(ResourceBundle.java:744)
+	at java.base/java.util.concurrent.ConcurrentHashMap.get(ConcurrentHashMap.java:936)
+	at java.base/java.util.ResourceBundle.getBundleImpl(ResourceBundle.java:1629)
+	at java.base/java.util.ResourceBundle.getBundleImpl(ResourceBundle.java:1593)
+	at java.base/java.util.ResourceBundle.getBundleImpl(ResourceBundle.java:1556)
+	at java.base/java.util.ResourceBundle.getBundle(ResourceBundle.java:857)
+	at service.TestDataReader.&lt;clinit&gt;(TestDataReader.java:4)
+	... 37 more
+</failure>
+    <system-out>Configuring TestNG with: org.apache.maven.surefire.testng.conf.TestNG652Configurator@77f03bb1
+</system-out>
+    <system-err>ERROR StatusLogger No Log4j 2 configuration file found. Using default configuration (logging only errors to the console), or user programmatically provided configurations. Set system property &apos;log4j2.debug&apos; to show Log4j 2 internal initialization logging. See https://logging.apache.org/log4j/2.x/manual/configuration.html for instructions on how to configure Log4j 2
+SLF4J: Failed to load class &quot;org.slf4j.impl.StaticLoggerBinder&quot;.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+нояб. 03, 2019 11:34:46 PM org.openqa.selenium.remote.DesiredCapabilities chrome
+INFO: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
+Starting ChromeDriver 78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}) on port 9801
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+[1572813289.827][WARNING]: Timed out connecting to Chrome, retrying...
+нояб. 03, 2019 11:34:51 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+[1572813293.904][WARNING]: Timed out connecting to Chrome, retrying...
+</system-err>
+  </testcase>
+  <testcase classname="pageobject.test.CalendarTest" name="dragAndDropResource" time="2.47">
+    <failure message="Could not initialize class service.TestDataReader" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: Could not initialize class service.TestDataReader
+	at service.UserCreator.withCredentialsFromProperty(UserCreator.java:10)
+	at pageobject.test.CalendarTest.dragAndDropResource(CalendarTest.java:30)
+</failure>
+    <system-err>нояб. 03, 2019 11:34:59 PM org.openqa.selenium.remote.DesiredCapabilities chrome
+INFO: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
+Starting ChromeDriver 78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}) on port 14458
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+[1572813302.524][WARNING]: Timed out connecting to Chrome, retrying...
+нояб. 03, 2019 11:35:04 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+[1572813306.572][WARNING]: Timed out connecting to Chrome, retrying...
+</system-err>
+  </testcase>
+  <testcase classname="pageobject.test.CreateCaseTest" name="completeChecklist" time="0.328">
+    <failure message="Could not initialize class service.TestDataReader" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: Could not initialize class service.TestDataReader
+	at service.UserCreator.withCredentialsFromProperty(UserCreator.java:10)
+	at pageobject.test.CreateCaseTest.createCase(CreateCaseTest.java:21)
+	at pageobject.test.CreateCaseTest.completeChecklist(CreateCaseTest.java:37)
+</failure>
+    <system-err>нояб. 03, 2019 11:35:11 PM org.openqa.selenium.remote.DesiredCapabilities chrome
+INFO: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
+Starting ChromeDriver 78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}) on port 39468
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+[1572813315.011][WARNING]: Timed out connecting to Chrome, retrying...
+нояб. 03, 2019 11:35:17 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+[1572813319.045][WARNING]: Timed out connecting to Chrome, retrying...
+</system-err>
+  </testcase>
+  <testcase classname="pageobject.test.CreateCaseTest" name="createAndSearchCase" time="0.333">
+    <failure message="Could not initialize class service.TestDataReader" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: Could not initialize class service.TestDataReader
+	at service.UserCreator.withCredentialsFromProperty(UserCreator.java:10)
+	at pageobject.test.CreateCaseTest.createCase(CreateCaseTest.java:21)
+	at pageobject.test.CreateCaseTest.createAndSearchCase(CreateCaseTest.java:28)
+</failure>
+    <system-err>нояб. 03, 2019 11:35:22 PM org.openqa.selenium.remote.DesiredCapabilities chrome
+INFO: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
+Starting ChromeDriver 78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}) on port 21803
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+[1572813325.352][WARNING]: Timed out connecting to Chrome, retrying...
+нояб. 03, 2019 11:35:27 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+[1572813329.408][WARNING]: Timed out connecting to Chrome, retrying...
+</system-err>
+  </testcase>
+  <testcase classname="pageobject.test.CreateCaseTest" name="createCase" time="0.345">
+    <failure message="Could not initialize class service.TestDataReader" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: Could not initialize class service.TestDataReader
+	at service.UserCreator.withCredentialsFromProperty(UserCreator.java:10)
+	at pageobject.test.CreateCaseTest.createCase(CreateCaseTest.java:21)
+</failure>
+    <system-err>нояб. 03, 2019 11:35:32 PM org.openqa.selenium.remote.DesiredCapabilities chrome
+INFO: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
+Starting ChromeDriver 78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}) on port 18234
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+[1572813335.712][WARNING]: Timed out connecting to Chrome, retrying...
+нояб. 03, 2019 11:35:37 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+[1572813339.758][WARNING]: Timed out connecting to Chrome, retrying...
+</system-err>
+  </testcase>
+</testsuite>

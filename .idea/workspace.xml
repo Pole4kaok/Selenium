@@ -2,26 +2,43 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9115984e-f870-408a-abd5-4a3fa4f649fc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/driver/DriverSingleton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/model/CaseModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/model/PersonModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/model/UserModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pageobject/test/CalendarTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pageobject/test/CreateCaseTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/service/CaseCreator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/service/PersonCreator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/service/TestDataReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/service/UserCreator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/util/TestListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/qa.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/staging.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/testng-all-tests.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/testng-smoke.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pageobject/page/AbstractPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageobject/page/AbstractPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pageobject/page/CaseEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageobject/page/CaseEventPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pageobject/page/CaseSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageobject/page/CaseSearchPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pageobject/page/CaseView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageobject/page/CaseViewPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pageobject/page/ResourceViewPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageobject/page/ResourceViewPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pageobject/test/NewWebDriverTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageobject/test/NewWebDriverTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pageobject/page/AddPartyPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageobject/page/AddPartyPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pageobject/page/CaseEventPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageobject/page/CaseEventPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pageobject/page/EditCaseViewPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageobject/page/EditCaseViewPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pageobject/page/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageobject/page/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pageobject/test/NewWebDriverTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageobject/test/CommonConditions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/MyProjects.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/pageobject/page/AbstractPage$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pageobject/page/AbstractPage$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/pageobject/page/AbstractPage$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pageobject/page/AbstractPage$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/pageobject/page/AbstractPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pageobject/page/AbstractPage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/pageobject/page/AddPartyPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pageobject/page/AddPartyPage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/pageobject/page/CalendarPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pageobject/page/CalendarPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/pageobject/page/CaseEvent.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/pageobject/page/CaseSearch.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/pageobject/page/CaseView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/pageobject/page/CaseEventPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pageobject/page/CaseEventPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/pageobject/page/CaseSearchPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pageobject/page/CaseSearchPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/pageobject/page/CaseViewPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pageobject/page/CaseViewPage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/pageobject/page/EditCaseViewPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pageobject/page/EditCaseViewPage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/pageobject/page/LoginPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pageobject/page/LoginPage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/pageobject/page/MainPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pageobject/page/MainPage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/pageobject/page/ResourceViewPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pageobject/page/ResourceViewPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/pageobject/test/NewWebDriverTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pageobject/test/NewWebDriverTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/pageobject/test/NewWebDriverTest.class" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,33 +57,26 @@
     </option>
     <option name="SCHEME" value="Project" />
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>click</find>
-      <find>enabled</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="488" />
-    <option name="y" value="4" />
-    <option name="width" value="1425" />
-    <option name="height" value="1056" />
-  </component>
   <component name="ProjectId" id="1R4FIDpwMooZKDCqzH7I3fHwz8b" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1570637938939" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.18529412" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.runner" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\MyProjects\src\test" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="" />
     </key>
@@ -86,8 +96,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.NewWebDriverTest.dragAndDropResource">
-    <configuration name="NewWebDriverTest.completeChecklist" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.CreateCaseTest.createAndSearchCase">
+    <configuration name="CommonConditions.completeChecklist" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MyProjects" />
       <extension name="coverage">
         <pattern>
@@ -96,7 +106,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="pageobject.test" />
-      <option name="MAIN_CLASS_NAME" value="pageobject.test.NewWebDriverTest" />
+      <option name="MAIN_CLASS_NAME" value="pageobject.test.CommonConditions" />
       <option name="METHOD_NAME" value="completeChecklist" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -105,8 +115,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NewWebDriverTest.createAndSearchCase" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="TryTest" />
+    <configuration name="CommonConditions.createCase" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="MyProjects" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="pageobject.test.*" />
@@ -114,7 +124,43 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="pageobject.test" />
-      <option name="MAIN_CLASS_NAME" value="pageobject.test.NewWebDriverTest" />
+      <option name="MAIN_CLASS_NAME" value="pageobject.test.CommonConditions" />
+      <option name="METHOD_NAME" value="createCase" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CreateCaseTest.completeChecklist" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="MyProjects" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pageobject.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="pageobject.test" />
+      <option name="MAIN_CLASS_NAME" value="pageobject.test.CreateCaseTest" />
+      <option name="METHOD_NAME" value="completeChecklist" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CreateCaseTest.createAndSearchCase" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="MyProjects" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pageobject.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="pageobject.test" />
+      <option name="MAIN_CLASS_NAME" value="pageobject.test.CreateCaseTest" />
       <option name="METHOD_NAME" value="createAndSearchCase" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -123,7 +169,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NewWebDriverTest.createResourceScheduleSession" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="CreateCaseTest.createCase" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MyProjects" />
       <extension name="coverage">
         <pattern>
@@ -132,44 +178,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="pageobject.test" />
-      <option name="MAIN_CLASS_NAME" value="pageobject.test.NewWebDriverTest" />
-      <option name="METHOD_NAME" value="createResourceScheduleSession" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="NewWebDriverTest.dragAndDropResource (1)" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="TryTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="pageobject.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="pageobject.test" />
-      <option name="MAIN_CLASS_NAME" value="pageobject.test.NewWebDriverTest" />
-      <option name="METHOD_NAME" value="dragAndDropResource" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="NewWebDriverTest.dragAndDropResource" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="MyProjects" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="pageobject.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="pageobject.test" />
-      <option name="MAIN_CLASS_NAME" value="pageobject.test.NewWebDriverTest" />
-      <option name="METHOD_NAME" value="dragAndDropResource" />
+      <option name="MAIN_CLASS_NAME" value="pageobject.test.CreateCaseTest" />
+      <option name="METHOD_NAME" value="createCase" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -178,19 +188,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="TestNG.NewWebDriverTest.completeChecklist" />
-      <item itemvalue="TestNG.NewWebDriverTest.createAndSearchCase" />
-      <item itemvalue="TestNG.NewWebDriverTest.createResourceScheduleSession" />
-      <item itemvalue="TestNG.NewWebDriverTest.dragAndDropResource" />
-      <item itemvalue="TestNG.NewWebDriverTest.dragAndDropResource (1)" />
+      <item itemvalue="TestNG.CommonConditions.completeChecklist" />
+      <item itemvalue="TestNG.CommonConditions.createCase" />
+      <item itemvalue="TestNG.CreateCaseTest.createCase" />
+      <item itemvalue="TestNG.CreateCaseTest.completeChecklist" />
+      <item itemvalue="TestNG.CreateCaseTest.createAndSearchCase" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.NewWebDriverTest.dragAndDropResource" />
-        <item itemvalue="TestNG.NewWebDriverTest.dragAndDropResource (1)" />
-        <item itemvalue="TestNG.NewWebDriverTest.createResourceScheduleSession" />
-        <item itemvalue="TestNG.NewWebDriverTest.completeChecklist" />
-        <item itemvalue="TestNG.NewWebDriverTest.createAndSearchCase" />
+        <item itemvalue="TestNG.CreateCaseTest.createAndSearchCase" />
+        <item itemvalue="TestNG.CreateCaseTest.createCase" />
+        <item itemvalue="TestNG.CreateCaseTest.completeChecklist" />
+        <item itemvalue="TestNG.CommonConditions.createCase" />
+        <item itemvalue="TestNG.CommonConditions.completeChecklist" />
       </list>
     </recent_temporary>
   </component>

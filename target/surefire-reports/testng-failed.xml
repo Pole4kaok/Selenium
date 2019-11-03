@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Command line suite]" verbose="0">
+  <test thread-count="5" name="Command line test(failed)" verbose="0">
+    <classes>
+      <class name="pageobject.test.CreateCaseTest">
+        <methods>
+          <include name="browserSetup"/>
+          <include name="completeChecklist"/>
+          <include name="createCase"/>
+          <include name="browserClose"/>
+          <include name="createAndSearchCase"/>
+        </methods>
+      </class> <!-- pageobject.test.CreateCaseTest -->
+      <class name="pageobject.test.CalendarTest">
+        <methods>
+          <include name="createResourceScheduleSession"/>
+          <include name="browserSetup"/>
+          <include name="browserClose"/>
+          <include name="dragAndDropResource"/>
+        </methods>
+      </class> <!-- pageobject.test.CalendarTest -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [Command line suite] -->

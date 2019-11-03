@@ -33,6 +33,13 @@ public class AbstractPage {
             }
         });
     }
+    public WebElement findElement(By by){
+        WebElement webElement = driver.findElement(by);
+        if(driver instanceof JavascriptExecutor){
+            ((JavascriptExecutor)driver).executeScript("arguments[0].style.border='3px solid red'", webElement);
+        }
+        return webElement;
+    }
 
 
     public void customWait(final WebElement element1){

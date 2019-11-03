@@ -1,5 +1,6 @@
 package pageobject.page;
 
+import model.PersonModel;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -34,12 +35,12 @@ public class AddPartyPage extends AbstractPage {
         return this;
     }
 
-    public AddPartyPage addPerson(String lastName, String firstName, String line1, String country){
+    public AddPartyPage addPerson(PersonModel person){
         waitElementClickable(LASTNAME_LOCATOR);
-        driver.findElement(LASTNAME_LOCATOR).sendKeys(lastName);
-        driver.findElement(FIRSTNAME_LOCATOR).sendKeys(firstName);
-        driver.findElement(LINE1_LOCATOR).sendKeys(line1);
-        driver.findElement(COUNTRY_LOCATOR).sendKeys(country);
+        driver.findElement(LASTNAME_LOCATOR).sendKeys(person.getLastName());
+        driver.findElement(FIRSTNAME_LOCATOR).sendKeys(person.getFirstName());
+        driver.findElement(LINE1_LOCATOR).sendKeys(person.getLine1());
+        driver.findElement(COUNTRY_LOCATOR).sendKeys(person.getCountry());
         driver.findElement(SAVEBTN_LOCATOR).click();
         return this;
     }
