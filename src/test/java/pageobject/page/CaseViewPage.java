@@ -14,12 +14,10 @@ public class CaseViewPage extends AbstractPage{
 
     public String getCaseNumber(){
         waitRulesEngineComplete(RULES_ENGINE_LOCATOR,rulesEngineComplete);
-        WebElement caseInfo = driver.findElement(CASE_INFO_LOCATOR);
-        String caseNumber = caseInfo.getText();
-        return caseNumber;
+       return getFoundCaseNumber();
     }
 
-    public String getFoundCaseNumber(){
+   public String getFoundCaseNumber(){
         WebElement caseInfo = driver.findElement(CASE_INFO_LOCATOR);
         String caseNumber = caseInfo.getText();
         return caseNumber;

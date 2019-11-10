@@ -8,7 +8,6 @@ import org.openqa.selenium.WebElement;
 import static pageobject.page.MainPage.SAVEBTN_LOCATOR;
 
 public class EditCaseViewPage extends AbstractPage {
-   // protected static final By CASECAPTIONMENU_LOCATOR = By.xpath("//*[@id=\"checkInstanceRow35\"]");
     protected static final By CASEVIEW_LOCATOR = By.id("menuItem-10044-1-main");
     protected static final By CASECAPTION_FIELD_LOCATOR = By.id("caseCaption");
     protected static final By CASETITLE_FIELD_LOCATOR = By.id("caseTitle");
@@ -20,16 +19,23 @@ public class EditCaseViewPage extends AbstractPage {
         driver.findElement(CASEVIEW_LOCATOR).click();
         waitElementVisible(EDITLINK_LOCATOR);
         driver.findElement(EDITLINK_LOCATOR).click();
-        waitElementClickable(CASECAPTION_FIELD_LOCATOR);
-        driver.findElement(CASECAPTION_FIELD_LOCATOR).sendKeys(newCase.getcaseCaption());
+
+        addCaseCaption(newCase.getcaseCaption());
         addCaseTitle(newCase.getcaseTitle());
-        driver.findElement(SAVEBTN_LOCATOR).click();
+        saveChanges();
         return this;
     }
 
     public EditCaseViewPage addCaseTitle(String caseTitle){
         WebElement caseTitleField = driver.findElement(CASETITLE_FIELD_LOCATOR);
         caseTitleField.sendKeys(caseTitle);
+        return this;
+    }
+
+    public EditCaseViewPage addCaseCaption(String caseCaption){
+        waitElementClickable(CASECAPTION_FIELD_LOCATOR);
+        WebElement caseCaptionField = driver.findElement(CASECAPTION_FIELD_LOCATOR);
+        caseCaptionField.sendKeys(caseCaption);
         return this;
     }
 }

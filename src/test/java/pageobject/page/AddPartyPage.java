@@ -22,16 +22,23 @@ public class AddPartyPage extends AbstractPage {
     public AddPartyPage addPartyRoleType(String type, String role){
         driver.findElement(PARTY_MENU_LOCATOR).click();
         driver.findElement(ADDNEWBNT_LOCATOR).click();
-        waitElementClickable(PARTYTYPE_SELECT_LOCATOR);
+        setPartyType(type);
+        setPartyRole(role);
+        saveChanges();
+        return this;
+    }
 
+    public AddPartyPage setPartyType (String type){
+        waitElementClickable(PARTYTYPE_SELECT_LOCATOR);
         WebElement partyTypeDropdown = driver.findElement(PARTYTYPE_SELECT_LOCATOR);
         customWait(partyTypeDropdown);
         partyTypeDropdown.sendKeys(type);
-
+        return this;
+    }
+    public AddPartyPage setPartyRole(String role){
         WebElement partyRoleDropdown = driver.findElement(PARTYROLE_SELECT_LOCATOR);
         partyRoleDropdown.click();
         partyRoleDropdown.sendKeys(role);
-        driver.findElement(SAVEBTN_LOCATOR).click();
         return this;
     }
 
@@ -41,13 +48,13 @@ public class AddPartyPage extends AbstractPage {
         driver.findElement(FIRSTNAME_LOCATOR).sendKeys(person.getFirstName());
         driver.findElement(LINE1_LOCATOR).sendKeys(person.getLine1());
         driver.findElement(COUNTRY_LOCATOR).sendKeys(person.getCountry());
-        driver.findElement(SAVEBTN_LOCATOR).click();
+        saveChanges();
         return this;
     }
 
     public AddPartyPage addLegalRep(){
         waitElementClickable(ADDLEGAL_LINK_LOCATOR);
-        driver.findElement(SAVEBTN_LOCATOR).click();
+        saveChanges();
         return this;
     }
 

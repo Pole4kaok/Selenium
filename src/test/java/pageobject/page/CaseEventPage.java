@@ -18,9 +18,7 @@ public class CaseEventPage extends AbstractPage {
     protected static final By CASEEVENTFOUND_LOCATOR = By.id("select2-result-label-771");
     public CaseEventPage(WebDriver driver){super(driver);}
 
-    public CaseEventPage chooseCaseEventClass(String caseEvent){
-       // waitElementVisible(CASEEVENT_LOCATOR);
-       // driver.findElement(CASEEVENT_LOCATOR).click();
+    public CaseEventPage newCaseEvent(String caseEvent){
         findElement(CASEEVENT_LOCATOR).click();
         waitElementClickable(CASEEVENTFIELD_LOCATOR);
         findElement(CASEEVENTFIELD_LOCATOR).click();
@@ -38,14 +36,13 @@ public class CaseEventPage extends AbstractPage {
                 break;
             }
         }
-
-        WebElement saveBtn = findElement(SAVEBTN_LOCATOR);
-        customWait(saveBtn);
+        WebElement addBtn = findElement(SAVEBTN_LOCATOR);
+        customWait(addBtn);
         return this;
     }
-     public CaseEventPage saveCaseEvent(){
-        waitElementVisible(CASEEVENTCLASS_LOCATOR);
-        findElement(SAVEBTN_LOCATOR).click();
-        return this;
-     }
+
+    public AddCaseEventPage addCaseEvent(){
+        saveChanges();
+        return new AddCaseEventPage(driver);
+    }
 }

@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="5" passed="0" failed="5" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-11-03T20:34:46Z" name="Command line suite" finished-at="2019-11-03T20:35:43Z" duration-ms="57415">
+  <suite started-at="2019-11-03T21:10:33Z" name="Command line suite" finished-at="2019-11-03T21:11:30Z" duration-ms="57291">
     <groups>
     </groups>
-    <test started-at="2019-11-03T20:34:46Z" name="Command line test" finished-at="2019-11-03T20:35:43Z" duration-ms="57415">
+    <test started-at="2019-11-03T21:10:33Z" name="Command line test" finished-at="2019-11-03T21:11:30Z" duration-ms="57291">
       <class name="pageobject.test.CreateCaseTest">
-        <test-method is-config="true" signature="browserSetup()[pri:0, instance:pageobject.test.CreateCaseTest@13c27452]" started-at="2019-11-03T20:35:11Z" name="browserSetup" finished-at="2019-11-03T20:35:21Z" duration-ms="9420" status="PASS">
+        <test-method is-config="true" signature="browserSetup()[pri:0, instance:pageobject.test.CreateCaseTest@13c27452]" started-at="2019-11-03T21:10:59Z" name="browserSetup" finished-at="2019-11-03T21:11:08Z" duration-ms="9405" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserSetup -->
-        <test-method signature="completeChecklist()[pri:0, instance:pageobject.test.CreateCaseTest@13c27452]" started-at="2019-11-03T20:35:21Z" name="completeChecklist" description="complete checklist" finished-at="2019-11-03T20:35:21Z" duration-ms="0" status="FAIL">
+        <test-method signature="completeChecklist()[pri:0, instance:pageobject.test.CreateCaseTest@13c27452]" started-at="2019-11-03T21:11:08Z" name="completeChecklist" description="complete checklist" finished-at="2019-11-03T21:11:08Z" duration-ms="0" status="FAIL">
           <exception class="java.lang.NoClassDefFoundError">
             <message>
               <![CDATA[Could not initialize class service.TestDataReader]]>
@@ -62,15 +62,15 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- completeChecklist -->
-        <test-method is-config="true" signature="browserClose()[pri:0, instance:pageobject.test.CreateCaseTest@13c27452]" started-at="2019-11-03T20:35:21Z" name="browserClose" finished-at="2019-11-03T20:35:22Z" duration-ms="586" status="PASS">
+        <test-method is-config="true" signature="browserClose()[pri:0, instance:pageobject.test.CreateCaseTest@13c27452]" started-at="2019-11-03T21:11:08Z" name="browserClose" finished-at="2019-11-03T21:11:09Z" duration-ms="605" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserClose -->
-        <test-method is-config="true" signature="browserSetup()[pri:0, instance:pageobject.test.CreateCaseTest@13c27452]" started-at="2019-11-03T20:35:22Z" name="browserSetup" finished-at="2019-11-03T20:35:31Z" duration-ms="9455" status="PASS">
+        <test-method is-config="true" signature="browserSetup()[pri:0, instance:pageobject.test.CreateCaseTest@13c27452]" started-at="2019-11-03T21:11:09Z" name="browserSetup" finished-at="2019-11-03T21:11:18Z" duration-ms="9418" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserSetup -->
-        <test-method signature="createAndSearchCase()[pri:0, instance:pageobject.test.CreateCaseTest@13c27452]" started-at="2019-11-03T20:35:31Z" name="createAndSearchCase" description="create and search for a case" finished-at="2019-11-03T20:35:31Z" duration-ms="0" status="FAIL">
+        <test-method signature="createAndSearchCase()[pri:0, instance:pageobject.test.CreateCaseTest@13c27452]" started-at="2019-11-03T21:11:18Z" name="createAndSearchCase" description="create and search for a case" finished-at="2019-11-03T21:11:18Z" duration-ms="0" status="FAIL">
           <exception class="java.lang.NoClassDefFoundError">
             <message>
               <![CDATA[Could not initialize class service.TestDataReader]]>
@@ -121,15 +121,15 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createAndSearchCase -->
-        <test-method is-config="true" signature="browserClose()[pri:0, instance:pageobject.test.CreateCaseTest@13c27452]" started-at="2019-11-03T20:35:31Z" name="browserClose" finished-at="2019-11-03T20:35:32Z" duration-ms="585" status="PASS">
+        <test-method is-config="true" signature="browserClose()[pri:0, instance:pageobject.test.CreateCaseTest@13c27452]" started-at="2019-11-03T21:11:19Z" name="browserClose" finished-at="2019-11-03T21:11:19Z" duration-ms="597" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserClose -->
-        <test-method is-config="true" signature="browserSetup()[pri:0, instance:pageobject.test.CreateCaseTest@13c27452]" started-at="2019-11-03T20:35:32Z" name="browserSetup" finished-at="2019-11-03T20:35:41Z" duration-ms="9415" status="PASS">
+        <test-method is-config="true" signature="browserSetup()[pri:0, instance:pageobject.test.CreateCaseTest@13c27452]" started-at="2019-11-03T21:11:19Z" name="browserSetup" finished-at="2019-11-03T21:11:29Z" duration-ms="9477" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserSetup -->
-        <test-method signature="createCase()[pri:0, instance:pageobject.test.CreateCaseTest@13c27452]" started-at="2019-11-03T20:35:41Z" name="createCase" description="Creating case" finished-at="2019-11-03T20:35:41Z" duration-ms="1" status="FAIL">
+        <test-method signature="createCase()[pri:0, instance:pageobject.test.CreateCaseTest@13c27452]" started-at="2019-11-03T21:11:29Z" name="createCase" description="Creating case" finished-at="2019-11-03T21:11:29Z" duration-ms="0" status="FAIL">
           <exception class="java.lang.NoClassDefFoundError">
             <message>
               <![CDATA[Could not initialize class service.TestDataReader]]>
@@ -179,17 +179,17 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createCase -->
-        <test-method is-config="true" signature="browserClose()[pri:0, instance:pageobject.test.CreateCaseTest@13c27452]" started-at="2019-11-03T20:35:42Z" name="browserClose" finished-at="2019-11-03T20:35:43Z" duration-ms="1176" status="PASS">
+        <test-method is-config="true" signature="browserClose()[pri:0, instance:pageobject.test.CreateCaseTest@13c27452]" started-at="2019-11-03T21:11:29Z" name="browserClose" finished-at="2019-11-03T21:11:30Z" duration-ms="580" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserClose -->
       </class> <!-- pageobject.test.CreateCaseTest -->
       <class name="pageobject.test.CalendarTest">
-        <test-method is-config="true" signature="browserSetup()[pri:0, instance:pageobject.test.CalendarTest@12f41634]" started-at="2019-11-03T20:34:46Z" name="browserSetup" finished-at="2019-11-03T20:34:56Z" duration-ms="10024" status="PASS">
+        <test-method is-config="true" signature="browserSetup()[pri:0, instance:pageobject.test.CalendarTest@12f41634]" started-at="2019-11-03T21:10:33Z" name="browserSetup" finished-at="2019-11-03T21:10:43Z" duration-ms="10571" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserSetup -->
-        <test-method signature="createResourceScheduleSession()[pri:0, instance:pageobject.test.CalendarTest@12f41634]" started-at="2019-11-03T20:34:56Z" name="createResourceScheduleSession" description="create resource schedule" finished-at="2019-11-03T20:34:57Z" duration-ms="1637" status="FAIL">
+        <test-method signature="createResourceScheduleSession()[pri:0, instance:pageobject.test.CalendarTest@12f41634]" started-at="2019-11-03T21:10:43Z" name="createResourceScheduleSession" description="create resource schedule" finished-at="2019-11-03T21:10:45Z" duration-ms="1676" status="FAIL">
           <exception class="java.lang.ExceptionInInitializerError">
             <full-stacktrace>
               <![CDATA[java.lang.ExceptionInInitializerError
@@ -245,15 +245,15 @@ at service.TestDataReader.<clinit>(TestDataReader.java:4)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createResourceScheduleSession -->
-        <test-method is-config="true" signature="browserClose()[pri:0, instance:pageobject.test.CalendarTest@12f41634]" started-at="2019-11-03T20:34:58Z" name="browserClose" finished-at="2019-11-03T20:34:59Z" duration-ms="633" status="PASS">
+        <test-method is-config="true" signature="browserClose()[pri:0, instance:pageobject.test.CalendarTest@12f41634]" started-at="2019-11-03T21:10:46Z" name="browserClose" finished-at="2019-11-03T21:10:46Z" duration-ms="609" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserClose -->
-        <test-method is-config="true" signature="browserSetup()[pri:0, instance:pageobject.test.CalendarTest@12f41634]" started-at="2019-11-03T20:34:59Z" name="browserSetup" finished-at="2019-11-03T20:35:08Z" duration-ms="9451" status="PASS">
+        <test-method is-config="true" signature="browserSetup()[pri:0, instance:pageobject.test.CalendarTest@12f41634]" started-at="2019-11-03T21:10:46Z" name="browserSetup" finished-at="2019-11-03T21:10:56Z" duration-ms="9439" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserSetup -->
-        <test-method signature="dragAndDropResource()[pri:0, instance:pageobject.test.CalendarTest@12f41634]" started-at="2019-11-03T20:35:08Z" name="dragAndDropResource" description="drag and drop try" finished-at="2019-11-03T20:35:10Z" duration-ms="1773" status="FAIL">
+        <test-method signature="dragAndDropResource()[pri:0, instance:pageobject.test.CalendarTest@12f41634]" started-at="2019-11-03T21:10:56Z" name="dragAndDropResource" description="drag and drop try" finished-at="2019-11-03T21:10:57Z" duration-ms="1505" status="FAIL">
           <exception class="java.lang.NoClassDefFoundError">
             <message>
               <![CDATA[Could not initialize class service.TestDataReader]]>
@@ -303,7 +303,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dragAndDropResource -->
-        <test-method is-config="true" signature="browserClose()[pri:0, instance:pageobject.test.CalendarTest@12f41634]" started-at="2019-11-03T20:35:11Z" name="browserClose" finished-at="2019-11-03T20:35:11Z" duration-ms="610" status="PASS">
+        <test-method is-config="true" signature="browserClose()[pri:0, instance:pageobject.test.CalendarTest@12f41634]" started-at="2019-11-03T21:10:58Z" name="browserClose" finished-at="2019-11-03T21:10:59Z" duration-ms="616" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserClose -->

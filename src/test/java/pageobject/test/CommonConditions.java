@@ -1,5 +1,7 @@
 package pageobject.test;
 
+import driver.ChromeCreator;
+import driver.DriverDecorator;
 import driver.DriverSingleton;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Platform;
@@ -26,27 +28,13 @@ public class CommonConditions {
     protected WebDriver driver;
     @BeforeMethod(alwaysRun = true)
     public void browserSetup(){
-        driver = DriverSingleton.getDriver();
-      /*  ChromeOptions options= new ChromeOptions();
-        //capabilities.setPlatform(Platform.WINDOWS);
-        try{
-            driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), options);
-        }
-        catch (MalformedURLException e){
-            e.printStackTrace();
-        }*/
-      /*  FirefoxOptions options = new FirefoxOptions();
-        try{
-            driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), options);
-        }
-        catch (MalformedURLException e) {
-            e.printStackTrace();
-        }*/
+        DriverSingleton creator = new ChromeCreator();
+        driver = creator.getDriver();
+        driver = new DriverDecorator(driver);
     }
-
 
     @AfterMethod(alwaysRun = true)
     public void browserClose(){
-       DriverSingleton.closeDriver();
+       driver.quit();
     }
 }

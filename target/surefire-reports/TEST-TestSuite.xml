@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="5" failures="5" name="TestSuite" time="6.047" errors="0" skipped="0">
+<testsuite tests="5" failures="5" name="TestSuite" time="5.959" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="12.0.2+10"/>
@@ -37,7 +37,7 @@
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="os.version" value="10.0"/>
     <property name="library.jansi.path" value="D:\ATM\apache-maven-3.6.2\bin\..\lib\jansi-native"/>
-    <property name="surefire.suiteXmlFiles" value="src\test\resources\testng-smoke.xml"/>
+    <property name="surefire.suiteXmlFiles" value="src/test/resources/testng-smoke.xml"/>
     <property name="user.home" value="C:\Users\User"/>
     <property name="user.timezone" value="Europe/Minsk"/>
     <property name="file.encoding" value="Cp1251"/>
@@ -46,7 +46,7 @@
     <property name="java.class.path" value="D:\ATM\apache-maven-3.6.2\bin\..\boot\plexus-classworlds-2.6.0.jar"/>
     <property name="java.vm.specification.version" value="12"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dbrowser=chrome -Dsurefire.suiteXmlFiles=src\test\resources\testng-smoke.xml clean test"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dbrowser=chrome -Dsurefire.suiteXmlFiles=src/test/resources/testng-smoke.xml clean test"/>
     <property name="java.home" value="D:\jdk-12.0.2_windows-x64_bin\jdk-12.0.2"/>
     <property name="user.language" value="ru"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
@@ -65,7 +65,7 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="pageobject.test.CalendarTest" name="createResourceScheduleSession" time="2.571">
+  <testcase classname="pageobject.test.CalendarTest" name="createResourceScheduleSession" time="2.441">
     <failure type="java.lang.ExceptionInInitializerError">java.lang.ExceptionInInitializerError
 	at service.UserCreator.withCredentialsFromProperty(UserCreator.java:10)
 	at pageobject.test.CalendarTest.createResourceScheduleSession(CalendarTest.java:16)
@@ -85,81 +85,81 @@ Caused by: java.lang.NullPointerException
 SLF4J: Failed to load class &quot;org.slf4j.impl.StaticLoggerBinder&quot;.
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-нояб. 03, 2019 11:34:46 PM org.openqa.selenium.remote.DesiredCapabilities chrome
+нояб. 04, 2019 12:10:33 AM org.openqa.selenium.remote.DesiredCapabilities chrome
 INFO: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
-Starting ChromeDriver 78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}) on port 9801
+Starting ChromeDriver 78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}) on port 21901
 Only local connections are allowed.
 Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
-[1572813289.827][WARNING]: Timed out connecting to Chrome, retrying...
-нояб. 03, 2019 11:34:51 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+[1572815437.546][WARNING]: Timed out connecting to Chrome, retrying...
+нояб. 04, 2019 12:10:39 AM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-[1572813293.904][WARNING]: Timed out connecting to Chrome, retrying...
+[1572815441.600][WARNING]: Timed out connecting to Chrome, retrying...
 </system-err>
   </testcase>
-  <testcase classname="pageobject.test.CalendarTest" name="dragAndDropResource" time="2.47">
+  <testcase classname="pageobject.test.CalendarTest" name="dragAndDropResource" time="2.243">
     <failure message="Could not initialize class service.TestDataReader" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: Could not initialize class service.TestDataReader
 	at service.UserCreator.withCredentialsFromProperty(UserCreator.java:10)
 	at pageobject.test.CalendarTest.dragAndDropResource(CalendarTest.java:30)
 </failure>
-    <system-err>нояб. 03, 2019 11:34:59 PM org.openqa.selenium.remote.DesiredCapabilities chrome
+    <system-err>нояб. 04, 2019 12:10:46 AM org.openqa.selenium.remote.DesiredCapabilities chrome
 INFO: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
-Starting ChromeDriver 78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}) on port 14458
+Starting ChromeDriver 78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}) on port 14631
 Only local connections are allowed.
 Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
-[1572813302.524][WARNING]: Timed out connecting to Chrome, retrying...
-нояб. 03, 2019 11:35:04 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+[1572815450.052][WARNING]: Timed out connecting to Chrome, retrying...
+нояб. 04, 2019 12:10:52 AM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-[1572813306.572][WARNING]: Timed out connecting to Chrome, retrying...
+[1572815454.080][WARNING]: Timed out connecting to Chrome, retrying...
 </system-err>
   </testcase>
-  <testcase classname="pageobject.test.CreateCaseTest" name="completeChecklist" time="0.328">
+  <testcase classname="pageobject.test.CreateCaseTest" name="completeChecklist" time="0.432">
     <failure message="Could not initialize class service.TestDataReader" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: Could not initialize class service.TestDataReader
 	at service.UserCreator.withCredentialsFromProperty(UserCreator.java:10)
 	at pageobject.test.CreateCaseTest.createCase(CreateCaseTest.java:21)
 	at pageobject.test.CreateCaseTest.completeChecklist(CreateCaseTest.java:37)
 </failure>
-    <system-err>нояб. 03, 2019 11:35:11 PM org.openqa.selenium.remote.DesiredCapabilities chrome
+    <system-err>нояб. 04, 2019 12:10:59 AM org.openqa.selenium.remote.DesiredCapabilities chrome
 INFO: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
-Starting ChromeDriver 78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}) on port 39468
+Starting ChromeDriver 78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}) on port 38404
 Only local connections are allowed.
 Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
-[1572813315.011][WARNING]: Timed out connecting to Chrome, retrying...
-нояб. 03, 2019 11:35:17 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+[1572815462.314][WARNING]: Timed out connecting to Chrome, retrying...
+нояб. 04, 2019 12:11:04 AM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-[1572813319.045][WARNING]: Timed out connecting to Chrome, retrying...
+[1572815466.343][WARNING]: Timed out connecting to Chrome, retrying...
 </system-err>
   </testcase>
-  <testcase classname="pageobject.test.CreateCaseTest" name="createAndSearchCase" time="0.333">
+  <testcase classname="pageobject.test.CreateCaseTest" name="createAndSearchCase" time="0.427">
     <failure message="Could not initialize class service.TestDataReader" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: Could not initialize class service.TestDataReader
 	at service.UserCreator.withCredentialsFromProperty(UserCreator.java:10)
 	at pageobject.test.CreateCaseTest.createCase(CreateCaseTest.java:21)
 	at pageobject.test.CreateCaseTest.createAndSearchCase(CreateCaseTest.java:28)
 </failure>
-    <system-err>нояб. 03, 2019 11:35:22 PM org.openqa.selenium.remote.DesiredCapabilities chrome
+    <system-err>нояб. 04, 2019 12:11:09 AM org.openqa.selenium.remote.DesiredCapabilities chrome
 INFO: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
-Starting ChromeDriver 78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}) on port 21803
+Starting ChromeDriver 78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}) on port 39390
 Only local connections are allowed.
 Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
-[1572813325.352][WARNING]: Timed out connecting to Chrome, retrying...
-нояб. 03, 2019 11:35:27 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+[1572815472.751][WARNING]: Timed out connecting to Chrome, retrying...
+нояб. 04, 2019 12:11:14 AM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-[1572813329.408][WARNING]: Timed out connecting to Chrome, retrying...
+[1572815476.789][WARNING]: Timed out connecting to Chrome, retrying...
 </system-err>
   </testcase>
-  <testcase classname="pageobject.test.CreateCaseTest" name="createCase" time="0.345">
+  <testcase classname="pageobject.test.CreateCaseTest" name="createCase" time="0.416">
     <failure message="Could not initialize class service.TestDataReader" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: Could not initialize class service.TestDataReader
 	at service.UserCreator.withCredentialsFromProperty(UserCreator.java:10)
 	at pageobject.test.CreateCaseTest.createCase(CreateCaseTest.java:21)
 </failure>
-    <system-err>нояб. 03, 2019 11:35:32 PM org.openqa.selenium.remote.DesiredCapabilities chrome
+    <system-err>нояб. 04, 2019 12:11:20 AM org.openqa.selenium.remote.DesiredCapabilities chrome
 INFO: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
-Starting ChromeDriver 78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}) on port 18234
+Starting ChromeDriver 78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}) on port 6984
 Only local connections are allowed.
 Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
-[1572813335.712][WARNING]: Timed out connecting to Chrome, retrying...
-нояб. 03, 2019 11:35:37 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+[1572815483.243][WARNING]: Timed out connecting to Chrome, retrying...
+нояб. 04, 2019 12:11:25 AM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-[1572813339.758][WARNING]: Timed out connecting to Chrome, retrying...
+[1572815487.285][WARNING]: Timed out connecting to Chrome, retrying...
 </system-err>
   </testcase>
 </testsuite>

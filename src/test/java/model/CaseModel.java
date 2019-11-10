@@ -15,9 +15,8 @@ public class CaseModel {
         return caseNumber;
     }
 
-    public String getcaseTitle() {
-        return caseTitle;
-    }
+    public String getcaseTitle() { return caseTitle; }
+
     public String getcaseCaption(){
         return caseCaption;
     }

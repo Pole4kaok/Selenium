@@ -39,7 +39,7 @@ public class CreateCaseTest extends CommonConditions {
         CaseModel newCase = CaseCreator.withDataFromProperties();
         AddPartyPage addPartyPage = new AddPartyPage(driver).addPartyRoleType("Party","Defendant")
                 .addPerson(testPerson).addLegalRep();
-        CaseEventPage caseEvent = new CaseEventPage(driver).chooseCaseEventClass("Filing - Bundle").saveCaseEvent();
+        AddCaseEventPage addCaseEventPage = new CaseEventPage(driver).newCaseEvent("Filing - Bundle").addCaseEvent();
         EditCaseViewPage editCaseViewPage = new EditCaseViewPage(driver).addCaseCaptionAndTitle(newCase);
         List checklist = driver.findElements(By.cssSelector(".cc-checklistTable"));
         Assert.assertTrue(checklist.size()==0,"It is visible. Or not. Maybe wrong selector");

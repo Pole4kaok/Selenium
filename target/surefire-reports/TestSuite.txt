@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 5, Errors: 0, Skipped: 0, Time elapsed: 58.551 sec <<< FAILURE!
-createResourceScheduleSession(pageobject.test.CalendarTest)  Time elapsed: 2.571 sec  <<< FAILURE!
+Tests run: 5, Failures: 5, Errors: 0, Skipped: 0, Time elapsed: 58.468 sec <<< FAILURE!
+createResourceScheduleSession(pageobject.test.CalendarTest)  Time elapsed: 2.441 sec  <<< FAILURE!
 java.lang.ExceptionInInitializerError
 	at service.UserCreator.withCredentialsFromProperty(UserCreator.java:10)
 	at pageobject.test.CalendarTest.createResourceScheduleSession(CalendarTest.java:16)
@@ -16,24 +16,24 @@ Caused by: java.lang.NullPointerException
 	at service.TestDataReader.<clinit>(TestDataReader.java:4)
 	... 37 more
 
-dragAndDropResource(pageobject.test.CalendarTest)  Time elapsed: 2.47 sec  <<< FAILURE!
+dragAndDropResource(pageobject.test.CalendarTest)  Time elapsed: 2.243 sec  <<< FAILURE!
 java.lang.NoClassDefFoundError: Could not initialize class service.TestDataReader
 	at service.UserCreator.withCredentialsFromProperty(UserCreator.java:10)
 	at pageobject.test.CalendarTest.dragAndDropResource(CalendarTest.java:30)
 
-completeChecklist(pageobject.test.CreateCaseTest)  Time elapsed: 0.328 sec  <<< FAILURE!
+completeChecklist(pageobject.test.CreateCaseTest)  Time elapsed: 0.432 sec  <<< FAILURE!
 java.lang.NoClassDefFoundError: Could not initialize class service.TestDataReader
 	at service.UserCreator.withCredentialsFromProperty(UserCreator.java:10)
 	at pageobject.test.CreateCaseTest.createCase(CreateCaseTest.java:21)
 	at pageobject.test.CreateCaseTest.completeChecklist(CreateCaseTest.java:37)
 
-createAndSearchCase(pageobject.test.CreateCaseTest)  Time elapsed: 0.333 sec  <<< FAILURE!
+createAndSearchCase(pageobject.test.CreateCaseTest)  Time elapsed: 0.427 sec  <<< FAILURE!
 java.lang.NoClassDefFoundError: Could not initialize class service.TestDataReader
 	at service.UserCreator.withCredentialsFromProperty(UserCreator.java:10)
 	at pageobject.test.CreateCaseTest.createCase(CreateCaseTest.java:21)
 	at pageobject.test.CreateCaseTest.createAndSearchCase(CreateCaseTest.java:28)
 
-createCase(pageobject.test.CreateCaseTest)  Time elapsed: 0.345 sec  <<< FAILURE!
+createCase(pageobject.test.CreateCaseTest)  Time elapsed: 0.416 sec  <<< FAILURE!
 java.lang.NoClassDefFoundError: Could not initialize class service.TestDataReader
 	at service.UserCreator.withCredentialsFromProperty(UserCreator.java:10)
 	at pageobject.test.CreateCaseTest.createCase(CreateCaseTest.java:21)

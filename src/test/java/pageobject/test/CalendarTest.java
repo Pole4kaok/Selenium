@@ -12,12 +12,12 @@ import service.UserCreator;
 public class CalendarTest extends CommonConditions {
     @Test(description = "create resource schedule")
     public void createResourceScheduleSession(){
-        driver.get("https://qa-cms.cefile-app.com");
+       // driver.get("https://qa-cms.cefile-app.com");
         UserModel testUser = UserCreator.withCredentialsFromProperty();
         MainPage mainPage = new LoginPage(driver).open().login(testUser);
         mainPage.openCalendar();
         String sessionName = "Mein Session 2";
-//       CalendarPage calendarPage = new CalendarPage(driver).createNewResSchedule(sessionName, "Charles");
+        CalendarPage calendarPage = new CalendarPage(driver).createNewResSchedule(sessionName, "Charles");
         String createdSessionName = new CalendarPage(driver).checkCreatedSession();
         Assert.assertEquals(sessionName,createdSessionName);
 
@@ -25,7 +25,7 @@ public class CalendarTest extends CommonConditions {
 
     @Test(description = "drag and drop try")
     public void dragAndDropResource(){
-        driver.get("https://qa-cms.cefile-app.com");
+       // driver.get("https://qa-cms.cefile-app.com");
         LoginPage loginPage = new LoginPage(driver);
         UserModel testUser = UserCreator.withCredentialsFromProperty();
         loginPage.open().login(testUser);
